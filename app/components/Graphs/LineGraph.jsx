@@ -8,11 +8,12 @@ export default function SimpleLineChart({sentimentObject}) {
         let sentimentArray = [];
 
         const words = sentimentObject.orderedWordsRating
+        console.log('words for sentiment Array', words)
         words.forEach( (word, i) => {
             console.log('making iteration ', i, 'in lineChart')
             sentimentArray.push({ currentWord: word.word, Polarity: word.totalScore, })
         })
-
+        console.log('tweets sentimentArray transformed for graph', sentimentArray)
         return sentimentArray;
     };
 
